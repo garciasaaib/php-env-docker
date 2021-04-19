@@ -2,6 +2,7 @@
 
 - Docker
 
+---
 
 ### Crea tu entorno
 
@@ -23,6 +24,7 @@ $ cd php-env
 $ docker-compose up -d
 ```
 
+---
 
 ### Agregar un proyecto
 
@@ -40,6 +42,8 @@ $ sudo chown -R $USER:$USER ~./src
 ```
 4. Copia y renombra el archivo .env.example => .env
 5. Abre el navegador en el puerto declarado en el docker-compose.yml para Nginx
+
+---
 
 ### Configuraciones de env
 
@@ -74,6 +78,7 @@ $ docker-compose exec php php artisan key:generate
 $ docker-compose exec php php artisan config:cache
 ```
 
+---
 
 ### DB user
 Las imagenes de Mysql solo generan el usuario root, asi que crea uno normal
@@ -101,5 +106,7 @@ $ docker-compose exec db bash
 ```
 # exit
 ```
+
+---
 
 ### Migraciones
