@@ -15,18 +15,21 @@ services:
       - laravel
 
   mysql:
-    image: mysql:5.7
+    image: mysql:5.7.22
     container_name: mysql
-    restart: always
-    environment: 
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homstead
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: admin.root
+    restart: unless-stopped
+    tty: true
     ports: 
       - 33069:3306
     volumes:
       - ./mysql:/var/lib/mysql
+    environment: 
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
     networks:
       - laravel
 
