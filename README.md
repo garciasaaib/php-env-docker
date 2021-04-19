@@ -6,9 +6,12 @@
 ### Crea tu entorno
 
 1. Ve tu carpeta de trabajo
-```$ cd Documents/dev/projects```
+```$ 
+cd Documents/dev/projects
+```
 2. Clona el entorno de github y dale un nombre a tu carpeta
-```$ git clone https://github.com/adranuz/php-env-docker.git php-env```
+```$ 
+git clone https://github.com/adranuz/php-env-docker.git php-env```
 3. Entra en la carpeta del proyecto
 ```$ cd php-env```
 4. Cambia los puertos a tu conveniencia en el docker-compose.yml
