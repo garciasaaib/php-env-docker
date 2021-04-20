@@ -86,11 +86,11 @@ Para usarlo debes tener instalado Docker previamente.
     $ docker-compose exec php php artisan cache:clear
     $ docker-compose exec php php artisan view:clear
     ```
-        - Si no te lo permite por permisos deberas darselos e intenta de nuevo:
+    - Si no te lo permite por permisos deberas darselos e intenta de nuevo:
             ```
             $ chown -R www-data: /var/www/html
             ```
-        - Si te da un error al limpiar cache es posible que no tengas las carpetas de chache, estas deben estar en src/storage/framework/ y las carpetas son views, testing, sessions y cache/data.
+    - Si te da un error al limpiar cache es posible que no tengas las carpetas de chache, estas deben estar en src/storage/framework/ y las carpetas son views, testing, sessions y cache/data.
             ```
             $ mkdir src/storage/framework/{views, testing, sessions, cache/data}
             ```
