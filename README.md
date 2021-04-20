@@ -58,7 +58,7 @@ Para usarlo debes tener instalado Docker previamente
 
 ---
 
-### Configuraciones de env
+### Configuraciones de env para la base de datos
 
 1. En el archivo docker-compose.yml vienen declaradas las configuraciones de la db, las puedes cambiar si gustas. Las que deje por default son: 
     ```
@@ -70,24 +70,30 @@ Para usarlo debes tener instalado Docker previamente
       MYSQL_ROOT_PASSWORD: 'secret.root'
     ```
 2. Cambia si es qe lo deseas esta configuracion y vuelve a correr el docker-compose
-3. Cambia la configuracion de tus variables de entorno a las de este archivo
+3. Conecta conecta e importa tu DB
+4. Cambia la configuracion de tus variables de entorno a las de este archivo
     ```
     DB_CONNECTION=mysql
     DB_HOST=mysql
     DB_PORT=3306
     DB_DATABASE=homestead
-    DB_USERNAME=homestead
-    DB_PASSWORD=secret
+    DB_USERNAME=root
+    DB_PASSWORD=secret.root
     ```
-4. Genera la clave del proyecto y copia el archivo .env
+5. Genera la clave del proyecto y copia el archivo .env
     ```
     $ docker-compose exec php php artisan key:generate
     ```
-5. Corre el comando para guardar la cache
+6. Corre el comando para guardar la cache
     ```
     $ docker-compose exec php php artisan config:cache
     ```
-6. Genera la clave del proyecto y copia el archivo .env
+7. Genera la clave del proyecto y copia el archivo .env
     ```
     $ docker-compose exec php php artisan migrate
     ```
+
+---
+
+### Extra
+Puedes llegar a necesitar algunos comandos para llevar a la vida a tu proyecto
